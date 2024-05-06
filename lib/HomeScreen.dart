@@ -7,6 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter_pytorch/pigeon.dart';
 import 'package:flutter_pytorch/flutter_pytorch.dart';
 import 'package:newobjectdetectionyolov5/LoaderState.dart';
+import 'package:newobjectdetectionyolov5/add_recipe.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -108,6 +109,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       child:
                           _objectModel.renderBoxesOnImage(_image!, objDetect)),
                 ),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddRecipe()));
+                }, child: const Text('Add Recipe')),
 
           // !firststate
           //     ? LoaderState()
