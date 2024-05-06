@@ -101,7 +101,7 @@ class _AddRecipeState extends State<AddRecipe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue, 
+      appBar: AppBar(backgroundColor: Colors.pink, 
       title: Text('ADD RECIPE'),
       ),
       floatingActionButton: FloatingActionButton(child: const Icon(Icons.add),

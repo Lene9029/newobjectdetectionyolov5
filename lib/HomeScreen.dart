@@ -94,12 +94,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("OBJECT DETECTOR APP")),
+      appBar: AppBar(title: const Text("SMART PALATE"),
+      centerTitle: true,
+      backgroundColor: Colors.pink,),
       backgroundColor: Colors.white,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddRecipe()));
+                }, child: const Text('Add Recipe')),
+          SizedBox(height: 80,),      
           //Image with Detections....
 
           !firststate
@@ -109,9 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child:
                           _objectModel.renderBoxesOnImage(_image!, objDetect)),
                 ),
-                ElevatedButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddRecipe()));
-                }, child: const Text('Add Recipe')),
+                
 
           // !firststate
           //     ? LoaderState()

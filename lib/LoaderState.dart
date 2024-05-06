@@ -41,7 +41,7 @@ class _LoaderStateState extends State<LoaderState>
             child: Container(
               margin: EdgeInsets.only(right: 20.0),
               child: Gif(
-                image: AssetImage("images/dentskanload.gif"),
+                image: AssetImage("images/searching.gif"),
                 controller:
                     controller1, // if duration and fps is null, original gif fps will be used.
                 autostart: Autostart.loop,
